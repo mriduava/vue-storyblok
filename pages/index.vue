@@ -1,19 +1,21 @@
 <template>
-  <section class="container">
-
-    <PostPreview 
-       v-for="post in posts" 
-       :key="post.id" 
-       :title="post.title"
-       :excerpt="post.text"
-       :thumbnail="post.imageurl"
-       :id="post.id"/>
-
-  </section>
+   <div class="container">
+    <div class="row">
+      <div class="col-md-6 mt-0 mb-4" v-for="man in mans" :key="man.id" >
+        <PostPreview 
+          :title="man.title"
+          :excerpt="man.text"
+          :price="man.price"
+          :thumbnail="man.imageurl"
+          :id="man.id"
+        />
+     </div>
+    </div>
+   </div>
 </template>
 
 <script>
-import PostPreview from "@/components/Blog/PostPreview";
+import PostPreview from "@/components/Store/PostPreview";
 export default {
   components: {
     PostPreview
@@ -39,15 +41,16 @@ export default {
   asyncData(context) {
     return context.app.$storyapi.get('cdn/stories', {
       version: 'draft',
-      starts_with: 'blog/'
+      starts_with: 'man/'
       }).then(res => {
-        // console.log(res);
+        console.log(res);
         return {
-          posts: res.data.stories.map(bp => {
+          mans: res.data.stories.map(bp => {
           return {
-            id: bp.id,
+            id: bp.slug,
             title: bp.content.title,
             text: bp.content.summary,
+            price: bp.content.price,
             imageurl: bp.content.thumbnail
           }
         })

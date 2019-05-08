@@ -15,7 +15,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato|Raleway' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato|Raleway' },
+      { rel: "stylesheet", href: "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"}
     ]
   },
 
@@ -40,11 +41,11 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    ['storyblok-nuxt', {accessToken: 'vzwC59CqmD9irvJTGSQVKAtt', cacheProvider: 'memory'}]
+    ['storyblok-nuxt', {accessToken: 'vzwC59CqmD9irvJTGSQVKAtt', cacheProvider: 'memory'}],
 
     // '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
-    // 'bootstrap-vue/nuxt',
+    ['bootstrap-vue/nuxt']
   ],
 
 
