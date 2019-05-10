@@ -5,9 +5,9 @@
   <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button> -->
-      <nuxt-link to="/man"><a class="nav-item nav-link active">MEN</a></nuxt-link>
-      <a class="nav-item nav-link">WOMEN</a>
-      <a class="nav-item nav-link">KIDS</a>
+      <nuxt-link to="/men"><a class="nav-item nav-link active">MEN</a></nuxt-link>
+      <nuxt-link to="/women"><a class="nav-item nav-link">WOMEN</a></nuxt-link>
+      <nuxt-link to="/kids"><a class="nav-item nav-link">KIDS</a></nuxt-link>
       <nuxt-link to="/about"><a class="nav-item nav-link">ABOUT</a></nuxt-link>
 </nav>
 

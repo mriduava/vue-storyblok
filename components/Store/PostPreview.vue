@@ -23,6 +23,7 @@
 
 <script>
 export default {
+  name: 'PostPreview',
     props: {
         title: {
             type: String,
