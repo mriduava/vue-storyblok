@@ -1,4 +1,4 @@
-# store
+<h1 style="color: #69636;">mridu store</h1>
 
 > Online store
 
